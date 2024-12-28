@@ -13,7 +13,8 @@ load_dotenv()
 
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("hello, world")
+    print("someone started the bot")
+    await update.message.reply_chat_action()
 
 
 if __name__ == "__main__":
@@ -22,4 +23,4 @@ if __name__ == "__main__":
     app.add_handler(CommandHandler("start", start_command))
 
     print("polling...")
-    app.run_polling(1)
+    app.run_polling(4)
