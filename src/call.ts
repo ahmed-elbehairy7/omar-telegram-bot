@@ -1,3 +1,5 @@
 import { Context } from "telegraf";
 
-async function call(ctx: Context) {}
+export default async function call(ctx: Context) {
+	ctx.reply("call");
+}
