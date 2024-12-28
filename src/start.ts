@@ -1,5 +1,5 @@
-import { Context } from "telegraf";
+import { Context, Markup } from "telegraf";
 
 export default async function start(ctx: Context) {
-	ctx.reply("Hello, world");
+	ctx.reply("choose an option", Markup.keyboard([]));
 }

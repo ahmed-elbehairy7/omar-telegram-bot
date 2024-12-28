@@ -10,9 +10,12 @@ const bot = new Telegraf(process.env.API_TOKEN);
 
 bot.start(start);
 bot.help(help);
+bot.action("testing", start);
 bot.command("call", call);
 bot.launch();
 console.log("running...");
+
+bot.action("menu", (ctx) => ctx.reply("hello option 1"));
 
 // Enable graceful stop
 process.once("SIGINT", () => bot.stop("SIGINT"));
