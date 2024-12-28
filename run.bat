@@ -1,1 +1,1 @@
-@python src
+@node src\index.js
